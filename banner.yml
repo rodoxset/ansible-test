@@ -1,3 +1,4 @@
+---
 - name: Configure banners
   shell: "{{item}}"
   ignore_errors: yes
