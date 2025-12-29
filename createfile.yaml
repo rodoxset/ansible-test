@@ -1,7 +1,13 @@
+---
 - name: Create a file with inline content
-  ansible.builtin.copy:
-    dest: /tmp/file_with_content.txt
-    content: |
-      This is the first line of the file.
-      This is the second line.
-      You can add multiple lines here.
+  hosts: grupo1
+  tasks:
+    - name: Create a new file named /tmp/test_file.txt with specific content
+      ansible.builtin.copy:
+        dest: /tmp/test_file.txt
+        content: |
+          This is the first line of the file.
+          This is the second line.
+          You can include multiple lines here.
+        mode: '0644' # Optional: set file permissions
+
