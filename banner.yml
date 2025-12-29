@@ -1,4 +1,5 @@
-- name: Server | Copy MTOD to server
-  ansible.builtin.copy:
-    src: motd
-    dest: /etc/motd
+- name: Configure banners
+  shell: "{{item}}"
+  ignore_errors: yes
+  with_items:
+    - "echo Acesso permitido somente a usuários autorizados > /etc/motd"
