@@ -6,7 +6,7 @@
   tasks:
     - name: Configure banners de forma profissional
       ansible.builtin.copy:
-        content: "Acesso permitido somente a usuários autorizados"
+        content: "Acesso permitido somente a usuários autorizados !!"
         dest: /etc/motd
         mode: '0644'
 
