@@ -1,5 +1,11 @@
-- name: Configure banners
-  shell: "{{item}}"
-  ignore_errors: yes
-  with_items:
-    - "echo Acesso permitido somente a usuários autorizados > /etc/motd"
+- name: Configure banners de forma profissional
+  ansible.builtin.copy:
+    content: "Acesso permitido somente a usuários autorizados"
+    dest: /etc/motd
+    mode: '0644'
+
+#- name: Configure banners
+#  shell: "{{item}}"
+#  ignore_errors: yes
+#  with_items:
+#    - "echo Acesso permitido somente a usuários autorizados > /etc/motd"
