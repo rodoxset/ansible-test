@@ -1,6 +1,6 @@
 ---
 - name: Playbook de Banners
-  hosts: all
+  hosts: grupo1
   become: yes
 
   tasks:
